@@ -16,8 +16,14 @@
     <!-- Define your beans here -->
  	<bean id="myCoach"
  		class="com.practice.springdemo.BaseballCoach">	
- 		<!-- set up dependency injection --> 	
+ 		<!-- set up constructor injection --> 	
  		<constructor-arg ref="myFortune" />	
+ 	</bean>
+ 	
+ 	<bean id="myCricketCoach"
+ 		class="com.practice.springdemo.CricketCoach">
+ 		<!-- set up setter injection -->
+ 		<property name="fortuneService" ref="myFortune" />
  	</bean>
 
 </beans>
